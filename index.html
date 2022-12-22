@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet"/> 
+    <script src="lol.js"></script>
+  </head>
+  <body>
+    <!-- START NAV -->
+
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">Home</a>
+        </li>
+        <li>
+          <a href="#projects">My Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <section id="welcome-section" class="welcome-section">
+      <h1>Hi, My name is Danny</h1>
+      <p id="school">BS in Computer Science | 2024 graduation</p><br>
+      <p id="bio">I have some experience in web development and coding. 
+        I'm mainly looking for internship opportunities in tech.
+      </p><br>
+      <a href="#contact">
+        <button id="contact-button">Contact Me <i class="fa fa-envelope"></i></button>
+      </a>
+
+      <section id="icons">
+        <div class="social-icons">
+          <a href="https://github.com/08dannyl" target=”_blank”>
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/danh-lam-433b451ab/" target=”_blank”>
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="skill-list">
+          <p>My Skills</p>
+          <ul class="skill-table">
+            <li>HTML/CSS</li>
+            <li>C++</li>
+            <li>GitHub</li>
+            <li>Excel</li>
+            <li>Powerpoint</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+
+<!--
+    <section id="projects" class="projects-section">
+      <h2 class="projects-section-header">These are some of my projects</h2>
+
+      <div class="projects-grid">
+        <a
+          href="https://codepen.io/freeCodeCamp/full/zNqgVx"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Tribute Page
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src=""
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Random Quote Machine
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href=""
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src=""
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            JavaScript Calculator
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href=""
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src=""
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Map Data Across the Globe
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href=""
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src=""
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Wikipedia Viewer
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href=""
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src=""
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Tic Tac Toe Game
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+      </div>
+
+      <a
+        href=""
+        class="btn btn-show-all"
+        target="_blank"
+        >Show all<i class="fas fa-chevron-right"></i
+      ></a>
+    </section>
+-->
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2>Let's work together...</h2>
+        <p>Or if you just want to leave a note</p>
+      </div>
+      <div class="contact-links">
+        <a 
+          onclick="openForm()" 
+          class="btn contact-details">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="form-popup" id="myForm">
+        <form action="https://formsubmit.co/danhdanny1234@gmail.com" class="form-container" method="POST">
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea 
+              name="message"  
+              rows="8" 
+              placeholder="Enter your message here!"
+              required
+            ></textarea>
+            <button type="submit" class="btn">All Set!</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </section>
+  
