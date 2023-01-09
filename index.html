@@ -2,11 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
-    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet"/> 
-    <script src="lol.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet"/>
   </head>
   <body>
 
@@ -18,31 +16,31 @@
     <nav id="navbar" class="nav">
       <ul class="nav-list">
         <li>
-          <a href="#welcome-section" target=”_blank”>
+          <a href="#welcome-section">
             <i class="fa fa-user"></i>
           </a>
-          <p class="nav-text">About</p> 
+          <p>About</p> 
         </li>
 
         <li>
-          <a href="#projects" target=”_blank”>
+          <a href="#projects">
             <i class="fa fa-folder"></i>
           </a> 
-          <p class="nav-text">Projects</p>
+          <p>Projects</p>
         </li>
 
         <li>
-          <a href="#contact" target=”_blank”>
+          <a href="#contact">
             <i class="fa fa-handshake"></i>
           </a>
-          <p class="nav-text">Let's Work</p>
+          <p>Let's Work</p>
         </li>
         
         <li>
           <a href="https://github.com/08dannyl" target=”_blank”>
             <i class="fab fa-github"></i>
           </a>
-          <p class="nav-text">Github</p>
+          <p>Github</p>
         </li>
           
       </ul>
@@ -53,24 +51,23 @@
             ABOUT SECTION
       ========================
     -->
+    
     <section id="background">
       <section id="welcome-section" class="welcome-section">
-        <h1 id="name">Danny Lam</h1>
-        <p id="school">BS in Computer Science | 2024 graduation</p><br>
-        <p id="bio">
-          I'm an international student from Vietnam currently studying in the US.
-          I aspire to become a software or web developer.
-          I'm on the lookout for internship opportunities as well as entry level positions.
-        </p><br>
-  
-          <p id="my-skillset">My Skillsets</p>
-          <ul class="skill-table">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C++</li>
-            <li>Node</li>
-            <li>GitHub</li>
-          </ul>    
+          <div id = "typed">
+            <h1 id="name" class="typed">Danny Lam</h1>
+            <p id="school" class="typed">BS in Computer Science | May 2024 graduation</p><br>
+            <p id="bio" class="typed">
+              I'm an international student from Vietnam currently
+              studying in the US. As a newcomer to the sphere
+              of technology, I set my goals to become as knowledgeable
+              as possible of all the branches of tech. I'm currently
+              focusing on web and software development and am on the
+              lookout for internship opportunities as well as entry level positions.
+            </p> 
+          </div> 
+          
+            
       </section>
   
   
@@ -80,8 +77,17 @@
         ========================
       -->
       <section id="projects" class="projects-section">
+        <h2 id="my-skillset">My Skillsets</h2>
+            <ul class="skill-table">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>C++</li>
+              <li>Node</li>
+              <li>GitHub</li>
+            </ul> 
+
         <h2 class="projects-section-header">Projects</h2>
-  
         <div class="projects-grid">
           <a href="" target="_blank" class="project">
             <img class="project-image" src="" alt="project" />
@@ -112,7 +118,7 @@
           
         </div>  
       </section>
-  
+      
       <!--
         ========================
             CONTACTS SECTION
@@ -125,28 +131,26 @@
           <p>Or leave me a comment</p>
         </div>
         <div class="contact-links">
-          <a 
-            onclick="openForm()" 
-            class="btn contact-details">
+          <button id="envelope-button" class="btn contact-details">
             <i class="fas fa-envelope"></i>
-          </a>
+          </button>
         </div>
-  
-        <div class="form-popup" id="myForm">
-          <form action="https://formsubmit.co/danhdanny1234@gmail.com" class="form-container" method="POST">
-              <input type="email" name="email" placeholder="Your Email Address" required>
-              <textarea 
-                name="message"  
-                rows="8" 
-                placeholder="Enter your message here!"
-                required
-              ></textarea>
-              <button type="submit" class="btn">All Set!</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
+        
+        
+        <form id="popup-form" style="display:none">
+          <label for="name">Name:</label><br>
+          <input type="text" id="pop-name" name="name"><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="pop-email" name="email"><br>
+          <label for="message">Message:</label><br>
+          <textarea id="pop-message" name="message" rows="5" cols="30"></textarea><br>
+          <input id="subbtn" type="submit" value="All set">
+        </form>  
+        <div id="overlay" style="display:none"></div>
       </section>
     </section>  
-   
+    <script src="Contact.js"></script>
+    <script src="About.js"></script>
+    <script src="Navbar.js"></script>
   </body>
 </html>  

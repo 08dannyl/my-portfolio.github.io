@@ -47,7 +47,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-white);
-  
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -84,6 +84,7 @@ img {
   background-image: linear-gradient(62deg, #666363 0%, #181719 100%);
 }
 
+
 /* 
 ========================
       NAV BAR
@@ -101,7 +102,7 @@ img {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   z-index: 10;
-  background:#080808;
+  background-color: rgba(0, 0, 0, 0.25);
 
   /* Make the rectangle partially hidden */
   overflow: hidden;
@@ -157,19 +158,19 @@ img {
       ABOUT SECTION
 ========================
 */
-.welcome-section {
-  display: flex;
+#welcome-section {
+  display: block;
   flex-direction: column;
   justify-content:center;
   align-items: left;
   width: 100%;
-  height: 120vh;
+  height: 75vh;
 }
 
 #name{
   font-size:5rem;
   margin-left:15%;
-  margin-top:10%;
+  padding-top:10%;
 }
 
 #school {
@@ -181,17 +182,16 @@ img {
 }
 
 #bio {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-left:15%;
-  margin-top: 4rem;
-  padding-right:35%;
+  padding-right:40%;
 }
 
 #my-skillset{
-  border-bottom: 0.2rem solid var(--main-white);
-  font-size: 5rem;
-  text-align: center;
   margin: 12rem auto 5rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+  font-size: 4rem;
+  text-align: center;
 }
 
 .skill-table{
@@ -214,17 +214,18 @@ img {
 
 
 .projects-section {
+  display: block;
+  flex-direction: column;
+  justify-content:center;
   text-align: center;
-  padding: 10rem 2rem;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 
 .projects-section-header {
-  max-width: 640px;
-  margin: 4rem auto 5rem auto;
+  margin: 12rem auto 5rem auto;
   border-bottom: 0.2rem solid var(--main-white);
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 @media (max-width: 28.75em) {
@@ -285,40 +286,7 @@ img {
 .project-title {
   font-size: 2rem;
   padding: 2rem 0.5rem;
-}
-
-
-
-/* 
-========================
-  CONTACTS SECTION
-========================
-*/
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
-}
-
-.btn-show-all {
-  font-size: 2rem;
-  background: var(--main-gray);
-  transition: background 0.3s ease-out;
-}
-
-.btn-show-all:hover {
-  background: var(--main-red);
-}
-
-.btn-show-all:hover > i {
-  transform: translateX(2px);
-}
-
-.btn-show-all > i {
-  margin-left: 10px;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
+  
 }
 
 /* 
@@ -326,15 +294,26 @@ img {
   CONTACT SECTION
 ========================
 */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  background-color: transparent;
+  border: transparent;
+  color:white;
+}
+
+
 .contact-section {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 60vh;
-  padding: 0 2rem;
+  height: 80vh;
+  padding: 13rem 2rem;
 }
 
 .contact-section-header > h2 {
@@ -363,82 +342,66 @@ img {
 .contact-details {
   font-size: 7rem;
   transition: transform 0.3s ease-out;
+  left:50%;
 }
 
 .contact-details:hover {
   transform:scale(1.2);
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
+#overlay {
   position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 20%;
-  right:39%;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 500px;
-  height:500px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-.form-container textarea, .form-container input[type=email] {
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 10; 
 }
 
-.form-container textarea{
-  display: block;
-  height: 20em;
-  min-width: 300px;
-}
-
-/* When the inputs get focus, do something */
-.form-container textarea:focus, .form-container input[type=email]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
+#popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--main-blue);
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  align-items: center;
+  width:40%;
+  z-index: 11; 
+}
+
+#pop-name{
+  height: 2rem;
+  width: 80%;
+}
+
+#pop-email{
+  height: 2rem;
+  width: 80%;
+}
+
+#pop-message{
+  height: 10rem;
+  width: 80%;
+}
+
+#subbtn{
+  background-color: transparent;
+  border: transparent;
   color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  font-size: 1.5rem;
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+@media (max-width: 480px) {
+  #popup-form label {
+    /* Display the label above the input field */
+    display: block;
+  }
+  #popup-form input, #popup-form textarea {
+    /* Make the input fields take up the full width of the form */
+    width: 100%;
+  }
 }
