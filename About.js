@@ -1,7 +1,7 @@
 
 // set up text to print, each item in array is new line
 var aText = document.getElementById("typed").innerHTML.split("\n");
-var iSpeed = 20; // time delay of print out
+var iSpeed = 10; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[iIndex].length; // the length of the text array
 var iScrollAt = 20; // start scrolling up at this many lines
@@ -18,7 +18,7 @@ function typewriter() {
     while ( iRow < iIndex ) {
         sContents += aText[iRow++];
     }
-    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos);
     if ( iTextPos++ == iArrLength ) {
         iTextPos = 0;
         iIndex++;
@@ -30,8 +30,6 @@ function typewriter() {
       setTimeout("typewriter()", iSpeed);
     }
 }
-    
+
 typewriter();
-
-
     

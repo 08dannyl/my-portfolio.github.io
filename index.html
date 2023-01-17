@@ -57,17 +57,33 @@
           <div id = "typed">
             <h1 id="name" class="typed">Danny Lam</h1>
             <p id="school" class="typed">BS in Computer Science | May 2024 graduation</p><br>
-            <p id="bio" class="typed">
-              I'm an international student from Vietnam currently
-              studying in the US. As a newcomer to the sphere
-              of technology, I set my goals to become as knowledgeable
-              as possible of all the branches of tech. I'm currently
-              focusing on web and software development and am on the
-              lookout for internship opportunities as well as entry level positions.
-            </p> 
           </div> 
-          
-            
+          <div id="bio">
+            <p id="par1">
+              As a computer science major in my junior year of college
+              , I am eager to gain real-world experience in the industry.
+              I am actively seeking internships or entry-level positions 
+              to further develop my abilities. 
+            </p><br>
+            <p id="par2">
+              I am a hardworking and 
+              dedicated individual with a passion for technology and problem-solving. I am confident 
+              that my skills and enthusiasm make me a strong candidate for 
+              any opportunity in the field. I am excited to contribute to a 
+              team and learn from experienced professionals.
+            </p>
+          </div>
+
+        <h2 id="my-skillset">My Skillsets</h2>
+        <ul class="skill-table">
+            <li>C++</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>GitHub</li>
+            <li>Javascript</li>
+            <li>React JS</li>        
+        </ul> 
+              
       </section>
   
   
@@ -77,46 +93,26 @@
         ========================
       -->
       <section id="projects" class="projects-section">
-        <h2 id="my-skillset">My Skillsets</h2>
-            <ul class="skill-table">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>C++</li>
-              <li>Node</li>
-              <li>GitHub</li>
-            </ul> 
+        
 
         <h2 class="projects-section-header">Projects</h2>
-        <div class="projects-grid">
-          <a href="" target="_blank" class="project">
-            <img class="project-image" src="" alt="project" />
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              
-              <span class="code">&#47;&gt;</span>
-            </p>
-          </a>
+        <div class="project-overlay">
+          <h3 class="project-title">Project Title</h3>
+          <p class="project-description">A password manager tool to secure login credentials, generate passwords, add two-factor authentication and sharing capabilities, to protect against cyber attacks.</p>
+          <a href="" class="project-button">Project button</a>
+        </div>
 
-          <a href="" target="_blank" class="project">
-            <img class="project-image" src="" alt="project" />
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              
-              <span class="code">&#47;&gt;</span>
-            </p>
-          </a>
+        <div class="project-overlay">
+          <h3 class="project-title">Project Title</h3>
+          <p class="project-description">A password manager tool to secure login credentials, generate passwords, add two-factor authentication and sharing capabilities, to protect against cyber attacks.</p>
+          <a href="" class="project-button">Project button</a>
+        </div>
 
-          <a href="" target="_blank" class="project">
-            <img class="project-image" src="" alt="project" />
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              
-              <span class="code">&#47;&gt;</span>
-            </p>
-          </a>
-          
-        </div>  
+        <div class="project-overlay">
+          <h3 class="project-title">Project Title</h3>
+          <p class="project-description">A password manager tool to secure login credentials, generate passwords, add two-factor authentication and sharing capabilities, to protect against cyber attacks.</p>
+          <a href="" class="project-button">Project button</a>
+        </div>
       </section>
       
       <!--
@@ -126,27 +122,18 @@
       -->
   
       <section id="contact" class="contact-section">
-        <div class="contact-section-header">
-          <h2>Let's work together...</h2>
-          <p>Or leave me a comment</p>
-        </div>
-        <div class="contact-links">
-          <button id="envelope-button" class="btn contact-details">
-            <i class="fas fa-envelope"></i>
-          </button>
-        </div>
-        
-        
-        <form id="popup-form" style="display:none">
-          <label for="name">Name:</label><br>
-          <input type="text" id="pop-name" name="name"><br>
-          <label for="email">Email:</label><br>
-          <input type="email" id="pop-email" name="email"><br>
-          <label for="message">Message:</label><br>
-          <textarea id="pop-message" name="message" rows="5" cols="30"></textarea><br>
-          <input id="subbtn" type="submit" value="All set">
+        <h2>Let's work together !</h2>
+        <p>Or leave me a message</p>
+         
+        <form id="popup-form">
+          <label for="name" id="contact-name" class="contact-field-title">Name:</label><br>
+          <input type="text" id="input-name" name="name"><br>
+          <label for="email"  id="contact-email" class="contact-field-title">Email:</label><br>
+          <input type="email" id="input-email" name="email"><br>
+          <label for="message" id="contact-message" class="contact-field-title">Message:</label><br>
+          <textarea id="input-message" name="message" rows="5" cols="30"></textarea><br>
+          <input id="submit-btn" type="submit" value="Submit">
         </form>  
-        <div id="overlay" style="display:none"></div>
       </section>
     </section>  
     <script src="Contact.js"></script>
