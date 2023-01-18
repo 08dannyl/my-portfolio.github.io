@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
@@ -40,8 +41,9 @@
           <a href="https://github.com/08dannyl" target=”_blank”>
             <i class="fab fa-github"></i>
           </a>
-          <p>Github</p>
+          <p>Source</p>
         </li>
+        <li></li>
           
       </ul>
     </nav>
@@ -55,8 +57,8 @@
     <section id="background">
       <section id="welcome-section" class="welcome-section">
           <div id = "typed">
-            <h1 id="name" class="typed">Danny Lam</h1>
-            <p id="school" class="typed">BS in Computer Science | May 2024 graduation</p><br>
+            <h1 id="name">Danny Lam</h1>
+            <p id="school">BS in Computer Science | May 2024 graduation</p><br>
           </div> 
           <div id="bio">
             <p id="par1">
@@ -73,9 +75,10 @@
               team and learn from experienced professionals.
             </p>
           </div>
+        
 
         <h2 id="my-skillset">My Skillsets</h2>
-        <ul class="skill-table">
+        <ul class="skill-table"> 
             <li>C++</li>
             <li>HTML</li>
             <li>CSS</li>
@@ -97,21 +100,21 @@
 
         <h2 class="projects-section-header">Projects</h2>
         <div class="project-overlay">
-          <h3 class="project-title">Project Title</h3>
+          <h3 class="project-title">Password manager</h3>
           <p class="project-description">A password manager tool to secure login credentials, generate passwords, add two-factor authentication and sharing capabilities, to protect against cyber attacks.</p>
-          <a href="" class="project-button">Project button</a>
+          <a href="https://github.com/08dannyl" class="project-button"><i class="fab fa-github"></i></a>
         </div>
 
         <div class="project-overlay">
-          <h3 class="project-title">Project Title</h3>
-          <p class="project-description">A password manager tool to secure login credentials, generate passwords, add two-factor authentication and sharing capabilities, to protect against cyber attacks.</p>
-          <a href="" class="project-button">Project button</a>
+          <h3 class="project-title">Image Classifier</h3>
+          <p class="project-description">A simple image classifier using a neural network, trained on the CIFAR-10 dataset and implemented using deep learning.</p>
+          <a href="https://github.com/08dannyl" class="project-button"><i class="fab fa-github"></i></a>
         </div>
 
         <div class="project-overlay">
-          <h3 class="project-title">Project Title</h3>
-          <p class="project-description">A password manager tool to secure login credentials, generate passwords, add two-factor authentication and sharing capabilities, to protect against cyber attacks.</p>
-          <a href="" class="project-button">Project button</a>
+          <h3 class="project-title">PacMan</h3>
+          <p class="project-description">My attempt to recreate the infamous Pacman game</p>
+          <a href="https://github.com/08dannyl" class="project-button"><i class="fab fa-github"></i></a>
         </div>
       </section>
       
@@ -125,19 +128,17 @@
         <h2>Let's work together !</h2>
         <p>Or leave me a message</p>
          
-        <form id="popup-form">
+        <form id="popup-form" action="https://formspree.io/f/mzbqzvjj" method="POST">
           <label for="name" id="contact-name" class="contact-field-title">Name:</label><br>
-          <input type="text" id="input-name" name="name"><br>
+          <input type="text" id="input-name" name="name" placeholder="Danny Lam"><br>
           <label for="email"  id="contact-email" class="contact-field-title">Email:</label><br>
-          <input type="email" id="input-email" name="email"><br>
+          <input type="email" id="input-email" name="email" placeholder="randomperson0938@gmail.com"><br>
           <label for="message" id="contact-message" class="contact-field-title">Message:</label><br>
-          <textarea id="input-message" name="message" rows="5" cols="30"></textarea><br>
+          <textarea id="input-message" name="message" rows="5" cols="30" placeholder="Hey Danny... " ></textarea><br>
           <input id="submit-btn" type="submit" value="Submit">
         </form>  
       </section>
     </section>  
-    <script src="Contact.js"></script>
-    <script src="About.js"></script>
-    <script src="Navbar.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>  

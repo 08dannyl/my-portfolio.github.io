@@ -142,6 +142,7 @@ h2 {
   width: 100%;
 }
 
+
 #name{
   font-size:7rem;
   text-align: center;
@@ -159,6 +160,15 @@ h2 {
   margin:25%;
   margin-bottom:25%;
 }
+
+.binary-ef{
+  margin:0 25%;
+  font-size: 1.6rem;
+  margin-bottom:0;
+}
+
+
+
 
 #my-skillset{
   border-bottom: 0.2rem solid white;
@@ -231,12 +241,16 @@ h2 {
   position:absolute;
   bottom:5%;
   left:5%;
-  border:2px solid white;
-  border-radius: 10px;
-  font-size: 2rem;
+  font-size: 4rem;
   color: white;
   text-decoration: none;
   padding:15px;
+  transition: transform 0.5s;
+}
+
+.project-button:hover{
+  transform: scale(1.5);
+  color:var(--main-blue);
 }
 
 /* 
@@ -291,7 +305,7 @@ h2 {
 
 #contact-email{
   position:absolute;
-  right:41%;
+  right:46%;
   top:5%;
 }
 
@@ -301,7 +315,7 @@ h2 {
   top:10%;
   border-radius: 5px;
   height:2.5rem;
-  width: 35%;
+  width: 40%;
 }
 
 #contact-message{
@@ -322,14 +336,14 @@ h2 {
 #submit-btn{
   position:absolute;
   bottom:0;
-  left:46%;
+  left:45%;
   background-color: transparent;
   border: transparent;
   color: white;
   font-size: 1.5rem;
   border:2px solid white;
   border-radius: 10px;
-  padding:10px;
+  padding:10px 20px;
 }
 
 @media (max-width: 480px) {
